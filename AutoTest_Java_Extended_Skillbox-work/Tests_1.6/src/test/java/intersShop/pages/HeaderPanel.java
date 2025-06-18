@@ -20,8 +20,7 @@ public class HeaderPanel {
     public WebElement checkoutLink;
 
     private final WebDriver driver;
-    public HeaderPanel(WebDriver driver)
-    {
+    public HeaderPanel(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
