@@ -28,12 +28,10 @@
         public Boolean isSuccessResultMessageDisplayed() {
             return successResultMessage.isDisplayed();
         }
-        public boolean getError()
-        {
+        public boolean getError() {
             return errorNameErrorPhone.isDisplayed();
         }
-        public String getSubTitle()
-        {
+        public String getSubTitle() {
             return subTitle.getText();
         }
     }
