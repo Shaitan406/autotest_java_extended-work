@@ -5,8 +5,7 @@
     import org.openqa.selenium.support.FindBy;
     import org.openqa.selenium.support.PageFactory;
 
-    public class BonusProgramPage extends Page
-    {
+    public class BonusProgramPage extends Page {
         private final String subUrl = "bonus/";
 
         @FindBy(css = "#bonus_main h3") //сообщение - карта оформлена
