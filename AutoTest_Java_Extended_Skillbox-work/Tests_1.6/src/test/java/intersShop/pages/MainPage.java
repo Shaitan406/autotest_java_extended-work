@@ -32,30 +32,24 @@ public class MainPage extends Page {
     @FindBy(css = "#product1 li[aria-hidden='false'] .item-img span")
     public List<WebElement> allProductLabels;
 
-    public MainPage(WebDriver driver)
-    {
+    public MainPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
-    public Page open()
-    {
+    public Page open() {
         driver.navigate().to(url);
         return this;
     }
-    public boolean getDiscountElements(int index)
-    {
+    public boolean getDiscountElements(int index) {
         return allProductLabels.get(index).getAttribute("class").contains("onsale");
     }
-    public int getElements()
-    {
+    public int getElements() {
         return allProductLabels.size();
     }
-    public String getSubTitle()
-    {
+    public String getSubTitle() {
         return subTitle.getText();
     }
-    public String getTitle()
-    {
+    public String getTitle() {
         return title.getText();
     }
 
