@@ -13,11 +13,11 @@ public class BonusProgramPageTests extends TestBase {
     private final String errorMassageForNameAndPhone = "Нету сообщения об ошибки не ввода данных в строку имени и телефона";
 
     @BeforeEach
-    public void start()
-    {
+    public void start() {
     page = new BonusProgramPage(driver);
     page.open();
     }
+    
     @Test
     public void bonusProgramPage_FillFormWithPhoneWith8_Success() {
         //arrange
