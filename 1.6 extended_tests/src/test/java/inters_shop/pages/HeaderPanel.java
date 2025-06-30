@@ -20,28 +20,9 @@ public class HeaderPanel {
     public WebElement checkoutLink;
 
     private final WebDriver driver;
-    public HeaderPanel(WebDriver driver)
-    {
+    public HeaderPanel(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
-    }
-    public Page checkOnCheckout()
-    {
-        checkoutLink.click();
-        return new Page(driver);
-    }
-    public Page clickOnMyAccount()
-    {
-        myAccountLink.click();
-        return new Page(driver);
-    }
-    public Page clickOnCart(){
-        cartLink.click();
-        return new Page(driver);
-    }
-    public Page clickOnCatalogueLink() {
-        catalogueLink.click();
-        return new Page(driver);
     }
 }
 
