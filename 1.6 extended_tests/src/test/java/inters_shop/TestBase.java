@@ -22,24 +22,17 @@ public class TestBase {
     protected WebDriverWait wait;
 
     @BeforeEach
-    public void setUp()
-    {
+    public void setUp() {
         System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
-        //driver = new ChromeDriver();
         var options = new ChromeOptions();
         options.addArguments("--incognito");
         driver = new ChromeDriver(options);
         driver.manage().window().setSize(new Dimension(1920,1080));
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-        //options.addArguments("--start-maximized");
-        //driver.manage().window().setSize(new Dimension(1920,1080));
-        //driver.manage().window().maximize();
     }
     @AfterEach
-    public void tearDown() throws IOException
-    {
+    public void tearDown() throws IOException {
         var sourseFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(sourseFile, new File("screenshots\\screenshot.png"));
         driver.quit();
